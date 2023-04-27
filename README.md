@@ -82,7 +82,7 @@ sudo yum -y install python3
 
 ### Lancement de la commande ansible-playbook qui va installer Docker
 ```
-  ansible-playbook -i inventory  playbook.yml
+  ansible-playbook -i inventory_for_ubuntu install_docker_ubuntu.yml --limit local 
 ```
 
 Please log out and log in again of your shell screen for 
@@ -147,13 +147,13 @@ Here is an overview of all tools:
 
 ## Access Tools
 ### With docker containers
-| *Tool* | *Link* | *Credentials* |
-| ------------- | ------------- | ------------- |
-| Jenkins | http://<vm_ip default>:18080/ | to be defined |
-| SonarQube | http://<vm_ip default>:19000/ | admin/admin |
-| Nexus | http://<vm_ip default>:18081/nexus | admin/use a token and set your own password |
-| GitLab | http://<vm_ip default>:8080/ | defined using the console |
-| Selenium Grid | http://<vm_ip default>:4444/grid/console | no login required |
-| Hello-world Test | http://<vm_ip default>:8090/webapp | no login required |
-| Petclinic-Test | http://<vm_ip default>:9090/petclinic | no login required |
-| AWX-ansible| http://<vm_ip default> | admin/password |
+| *Tool* | *Link*                                    | *Credentials* |
+| ------------- |-------------------------------------------| ------------- |
+| Jenkins | http://<vm_ip default>:32500/             | to be defined |
+| SonarQube | http://<vm_ip default>:32520/             | admin/admin |
+| Nexus | http://<vm_ip default>:32510/nexus        | admin/use a token and set your own password |
+| GitLab | http://<vm_ip default>:8080/              | defined using the console |
+| Selenium Grid | http://<vm_ip default>:30044/grid/console | no login required |
+| Hello-world Test | http://<vm_ip default>:30090/webapp       | no login required |
+| Petclinic-Test | http://<vm_ip default>:31090/petclinic    | no login required |
+| AWX-ansible| http://<vm_ip default>                    | admin/password |
